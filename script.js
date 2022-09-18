@@ -71,8 +71,8 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
+//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+/*
 /////////////////////////////////////////////////
 //Practice
 /////////////////////////////////////////////////
@@ -106,3 +106,74 @@ console.log(...arr, ...arr2);
 
 //join
 console.log(letters.join(' - '));
+
+const arr = [23, 11, 64];
+console.log(arr[0]);
+console.log(arr.at(0));
+console.log(arr);
+
+//getting last array element
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+console.log(arr.at(-1));
+
+//Works on strings to
+console.log('jonas'.at(0));
+console.log('jonas'.at(-1));
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(movement)}`);
+  }
+}
+
+console.log('-------FOREACH---------');
+
+movements.forEach(function (movement) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(movement)}`);
+  }
+});
+
+//Addign a counter
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+  }
+}
+
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+  }
+});
+
+const arr = [3, 5, 7, 3, 1, 6, 34, 3, 43, 62, 2346];
+
+arr.forEach(function (mov, i, arr) {
+  if (mov > 5) {
+    console.log(
+      `Line NUmber ${
+        i + 1
+      }: This number was chosen because its bigger than 5: ${mov}`
+      );
+    } else {
+      console.log(
+        `Line NUmber ${
+          i + 1
+        }: This number was chosen because its smaller than 5: ${mov}`
+        );
+      }
+    });
+    
+    */
